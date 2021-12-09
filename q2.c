@@ -3,11 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
-#include <string.h>
-
 void primo (int x, int L, int aux ){
   if (x <= 2){
     if (x == 2){
