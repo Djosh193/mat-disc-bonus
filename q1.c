@@ -16,7 +16,7 @@ void primo (int x, int L, int aux ){
   }
   else{
     
-    if (aux == L){
+    if (aux > L){
       printf ("%d É primo.\n", x);
       return;
     }
