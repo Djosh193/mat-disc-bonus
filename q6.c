@@ -4,19 +4,31 @@
 #include <string.h>
 
 //Algoritmo de Euclides
-void MDC (int a, int b, int t, int a0, int b0){
+void MDC (int a, int b, int t, int a0, int b0, int flag){
   
+
   if (a % b == 0){
     int s;
-    s = (b - (b0 * t) )/a0;
+
+    if (flag == 0){
+      t = - a0/b + 1;
+      s = 1;
+    }
+
+    else{
+      s = (b - (b0 * t) )/a0;
+    }
+    
     printf ("coeficiente s: %d\n",s);
     printf ("coeficiente t: %d\n",t);
     printf ("%d = %d.%d + %d.%d\n", b, a0, s, b0, t);
     return;
   }
+
   else {
+    flag = 1;
     t = t + ( (a - (a%b))/b  );
-    MDC (b, a % b, t, a0, b0);
+    MDC (b, a % b, t, a0, b0, flag);
     return;
   }
 
@@ -44,7 +56,7 @@ int main(){
 
   printf ("MDC(%d,%d) = %d.s + %d.t\n",a,b,a,b);
 
-  MDC(a,b,t,a,b);
+  MDC(a,b,t,a,b,t);
 
   return 0;
 }
