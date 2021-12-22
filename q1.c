@@ -37,6 +37,7 @@ int main (){
   int aux = 2; //Auxiliar
   int L; //Limite da busca
 
+  printf ("Digite o número inteiro a ser testado se é primo ou não.\n");
   scanf("%d", &x);
 
   L = ceil(sqrt(x));

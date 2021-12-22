@@ -57,6 +57,7 @@ int main (){
   int n; // Número para ser decomposto por fatores primos, != 1
   int cont = 2; //Contador
 
+  printf ("Digite o número inteiro para ser decomposto em fatores primos.\n");
   scanf("%d", &n);
   
   if (n >= 2){
