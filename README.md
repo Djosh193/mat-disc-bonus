@@ -3,10 +3,10 @@
 **Professor**: Bruno Pimentel
 
 **Integrantes**:
-- Jorge Simões
-- Lucas Yuri
-- Karolaine
-- Gustavo Gaia
+- Gustavo Ribeiro Franco Gaia
+- Jorge Simões de Almeida Junior
+- Karolaine Lima Santos
+- Lucas Yuri Gomes Barros
 
 **Questões:**
 - [x] 1
@@ -14,8 +14,8 @@
 - [x] 3
 - [x] 4
 - [x] 5
-- [ ] 6
-- [ ] 7
-- [ ] 8
-- [ ] 9
-- [ ] 10
+- [x] 6
+- [x] 7
+- [x] 8
+- [x] 9
+- [x] 10
