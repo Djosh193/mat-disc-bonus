@@ -2,64 +2,36 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
-#include <string.h>
-
-void primo (int x, int L, int aux ){
-  if (x <= 2){
-    if (x == 2){
-      printf ("%d\n", x);
-      return;
-    }
-    else{
+void primo(long long int x, long long int L) {
+  int i;
+  for(i = 2; i < L; i++) {
+    if (x % i == 0) {
       return;
     }
   }
-  else{
-    
-    if (aux > L){
-      printf ("%d\n", x);
-      return;
-    }
-
-    else{
-      if (x % aux == 0){
-        return;
-      }
-      primo (x, L, aux+1);
-    }
-  }
-}
-
-void lista (int limite, int cont){
-  //Parametros pra função
-  int aux = 2; //Auxiliar
-  int L;
-  L = ceil(sqrt(cont));
-
-  //Teste se é primo ou não.
-  if (cont == limite){
-    primo (cont, L, aux);
-    return;
-  }
-  else{
-    primo (cont, L, aux);
-    lista (limite, cont+1);
-  }
-  return;
+  printf("%lld\n", x);
 }
 
 int main (){
-  
-  int limite; //Número limite da busca por primos
-  int cont = 0; //Contador
+  printf ("Listar números Primos por 60 segundos:\n");
 
-  scanf("%d", &limite);
+  long long int c = 2;
+  int f = clock() / 1000;
 
-  lista (limite, cont);
+  while (f < 61) {
+    f = clock() / 1000;
+
+    int aux = 2; //Auxiliar
+    long long int L;
+    L = ceil(sqrt(c));
+
+    //Teste se é primo ou não.
+    primo (c, L);
+    
+    c++;
+  }
 
   return 0;
 }
